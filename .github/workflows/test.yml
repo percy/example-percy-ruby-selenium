@@ -1,0 +1,27 @@
+name: Tests
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+          bundler-cache: true
+      - uses: actions/cache@v2
+        with:
+          path: "./vendor/bundle"
+          key: v1/${{ runner.os }}/ruby-2.6/${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: v1/${{ runner.os }}/ruby-2.6/
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: v1/${{ runner.os }}/node-12/${{ hashFiles('**/package-lock.lock') }}
+          restore-keys: v1/${{ runner.os }}/node-12/
+      - run: make test
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
