@@ -1,24 +1,22 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    childprocess (4.0.0)
-    percy-selenium (1.0.0.pre.0)
+    childprocess (4.1.0)
+    percy-selenium (1.0.0)
       selenium-webdriver (>= 4.0.0.beta1)
-    rexml (3.2.5)
-    rubyzip (2.3.0)
-    selenium-webdriver (4.0.0.beta3)
+    rexml (3.4.1)
+    rubyzip (2.4.1)
+    selenium-webdriver (4.0.0)
       childprocess (>= 0.5, < 5.0)
-      rexml (~> 3.2)
+      rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
-      websocket (~> 1.0)
-    websocket (1.2.9)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  percy-selenium (~> 1.0.0.pre.0)
-  selenium-webdriver (~> 4.0.0.beta3)
+  percy-selenium (~> 1.0.0.0.0)
+  selenium-webdriver (~> 4.0.0.0)
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
