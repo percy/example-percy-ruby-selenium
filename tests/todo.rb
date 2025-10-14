@@ -10,7 +10,7 @@ Thread.new {
 }
 
 options = Selenium::WebDriver::Firefox::Options.new(args: ['--headless'])
-driver = Selenium::WebDriver.for(:firefox, capabilities: [options])
+driver = Selenium::WebDriver.for(:firefox, options: options)
 wait = Selenium::WebDriver::Wait.new(:timeout => 8)
 
 # go to the example app

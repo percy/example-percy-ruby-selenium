@@ -5,6 +5,13 @@
 Example app showing integration of [Percy](https://percy.io/) visual testing
 into Ruby Selenium tests.
 
+## Versions used in this branch
+
+- selenium-webdriver: 4.36.0
+- percy-selenium: 1.1.1
+- @percy/cli: 1.31.2
+- todomvc-app-css: 2.4.3
+
 Based on the [TodoMVC](https://github.com/tastejs/todomvc) [VanillaJS](https://github.com/tastejs/todomvc/tree/master/examples/vanillajs)
 app, forked at commit [4e301c7014093505dcf6678c8f97a5e8dee2d250](https://github.com/tastejs/todomvc/tree/4e301c7014093505dcf6678c8f97a5e8dee2d250).
 
