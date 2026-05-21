@@ -5,6 +5,15 @@
 Example app showing integration of [Percy](https://percy.io/) visual testing
 into Ruby Selenium tests.
 
+> **New:** This repo ships an [`advanced/`](./advanced) example covering the full applicable Percy SDK feature surface for `percy-selenium` (Ruby gem). See the [Percy SDK Feature Matrix](https://docs.percy.io/docs/sdk-feature-matrix) for cross-SDK coverage.
+
+## Examples
+
+| Example | What it shows | Run command |
+|---|---|---|
+| `./` (basic, at repo root) | Minimum viable integration: a few `Percy.snapshot(driver, name)` calls. Start here. | `make test` |
+| [`./advanced/`](./advanced) | Full applicable Percy SDK feature surface: widths, minHeight, enable_javascript, readiness, responsive_snapshot_capture, regions, sync, dual snake_case/camelCase naming. RSpec-driven. See [`advanced/README.md`](./advanced/README.md) for the matrix-row coverage table. | `cd advanced && make test` |
+
 ## Versions used in this branch
 
 - selenium-webdriver: 4.36.0
