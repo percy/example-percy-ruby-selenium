@@ -1,0 +1,78 @@
+# PER-8195 Phase 1 — Ruby-Selenium matrix-row mapping.
+# Test code: spec/todomvc_advanced_spec.rb (RSpec).
+
+sdk: ruby-selenium
+package: percy-selenium
+language: ruby
+sdk_min_version: '1.1.2'
+cli_min_version: '1.31.13'
+
+rows:
+  - id: widths
+    state: covered
+    test: 'TodoMVC Advanced > exercises widths'
+  - id: min_height
+    state: covered
+    test: 'TodoMVC Advanced > exercises minHeight'
+  - id: enable_javascript
+    state: covered
+    test: 'TodoMVC Advanced > exercises enableJavaScript'
+  - id: responsive_snapshot_capture
+    state: covered
+    test: 'TodoMVC Advanced > exercises responsive_snapshot_capture'
+  - id: readiness_preset
+    state: covered
+    test: 'TodoMVC Advanced > exercises readiness preset'
+  - id: labels
+    state: covered
+    test: 'TodoMVC Advanced > exercises labels'
+  - id: test_case
+    state: covered
+    test: 'TodoMVC Advanced > exercises testCase'
+  - id: device_pixel_ratio
+    state: covered
+    test: 'TodoMVC Advanced > exercises devicePixelRatio'
+  - id: browsers
+    state: covered
+    test: 'TodoMVC Advanced > exercises browsers override'
+  - id: regions
+    state: covered
+    test: 'TodoMVC Advanced > exercises regions'
+  - id: sync
+    state: covered
+    test: 'TodoMVC Advanced > exercises sync option'
+  - id: percy_css
+    state: covered
+    test: 'global via .percy.yml snapshot.percy-css'
+
+  # Ruby-specific.
+  - id: snake_case_camelcase_dual_naming
+    state: covered
+    test: 'TodoMVC Advanced > snake_case + camelCase dual naming'
+  - id: cross_origin_iframe_handling
+    state: covered
+    test: 'automatic via percy-selenium >= 1.1.2'
+  - id: create_region_helper
+    state: planned
+    test: 'TodoMVC Advanced > exercises Percy.create_region for regions'
+
+  # Not exposed in Ruby SDK.
+  - id: scope
+    state: n_a
+    reason: 'Not exposed in percy-selenium ruby 1.1.2 options hash.'
+  - id: dom_transformation
+    state: n_a
+    reason: 'Not exposed in percy-selenium ruby 1.1.2 options hash.'
+  - id: discovery
+    state: n_a
+    reason: 'discovery is per-build, not per-snapshot in this SDK.'
+
+  - id: env_percy_server_address
+    state: covered
+    test: 'CI: advanced job sets PERCY_SERVER_ADDRESS via env'
+  - id: percy_yml_global_config
+    state: covered
+    test: 'global config consumed via .percy.yml'
+  - id: environment_info_reporting
+    state: covered
+    test: 'automatic via percy-selenium client info'
